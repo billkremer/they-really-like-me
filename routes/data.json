@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Priscilla Gyamfi",
+    "bio": "Priscilla is great!",
+    "imageurl": "../public/assets/images/priscilla.jpg"
+  },
+  {
+    "name": "Scott Fox",
+    "bio": "Scott is also great and is a Pisces.",
+    "imageurl": "../public/assets/images/scott.jpg"
+  },
+  {
+    "name": "Bill Kremer",
+    "bio": "Bill is great too. He is smart and a nice dresser.",
+    "imageurl": "../public/assets/images/bill.jpg"
+  }
+]
