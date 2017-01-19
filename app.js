@@ -18,6 +18,9 @@ app.get('/bios', function(req, res) {
   res.send(people);
 });
 
+app.get('/likes', function(req, res) {
+
+});
 
 
 app.listen(3000);
