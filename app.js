@@ -4,10 +4,9 @@ var bodyParser = require('body-parser');
 
 var people = require('./routes/data.json');
 
-var likesArray = [{name: 'Scott Fox', likes: 1},
-                  {name: 'Bill Kremer', likes: 2},
-                  {name: 'Priscilla Gyamfi', likes: 3}];
-
+var likesArray = [{name: 'Scott Fox', likes: 0},
+                  {name: 'Bill Kremer', likes: 0},
+                  {name: 'Priscilla Gyamfi', likes: 0}];
 
 
 
@@ -29,25 +28,22 @@ app.get('/likes', function(req, res) {
   res.send(likesArray);
 });
 
-// app.post('/likes'), function(req, res) {
-//
-// }
 
-app.post('/likes/Priscilla', function(req, res) {
+// hard coded posts
+app.post('/likes/PriscillaGyamfi', function(req, res) {
   likesArray[2].likes++;
-  console.log(likesArray[2].likes+ 'plikes');
+  res.sendStatus(200);
 });
 
-app.post('/likes/Scott', function(req, res) {
+app.post('/likes/ScottFox', function(req, res) {
   likesArray[0].likes++;
-  console.log(likesArray[0].likes+ 'slikes');
+  res.sendStatus(200);
 });
 
-app.post('/likes/Bill', function(req, res) {
+app.post('/likes/BillKremer', function(req, res) {
   likesArray[1].likes++;
-  console.log(likesArray[1].likes + 'billlikes');
+  res.sendStatus(200);
 });
-
 
 
 app.listen(3000);
