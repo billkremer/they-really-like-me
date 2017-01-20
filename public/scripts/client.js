@@ -12,14 +12,22 @@ getLikes(); //need to update likes beforehand, because some may likes have alrea
 
 
 function updateLikes (nameToGetMoreLikes) {
+// console.log(nameToGetMoreLikes);
 
   $.ajax({
     url: '/likes/' + nameToGetMoreLikes, // creates individual POST calls
     type: 'POST',
-    data: nameToGetMoreLikes,  // {}
-    success: getLikes
+    // data: nameToGetMoreLikes,  // {person: nameToGetMoreLikes}
+    success: getLikes,
+    error: displayError
   });
 }
+
+function displayError (response) {
+  console.log('error resp', response);
+  $('#errormessage').text('Could not add update: ' + response.responseText);
+
+};
 
 
 function getLikes(){
@@ -36,7 +44,7 @@ function updateCountonDom (likesArray) {
 //   $('.likes').empty(); // would empty all likes, but not necessary because of .text() below
 
   likesArray.forEach( function (individual) {
-    var idPlaceholder = individual.name.split(" ").join("")
+    var idPlaceholder = individual.name.split(" ").join("");
 
     $("#container").find("#"+idPlaceholder).next('span').text(individual.likes + " Likes!");
   });
