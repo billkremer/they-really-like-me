@@ -2,6 +2,7 @@ $(function () {
 
 getPeople();
 
+getLikes(); //need to update likes beforehand, because some may likes have alreay occured.
 
   $('#container').on('click', 'button', function () {
       updateLikes($(this).attr('id'));
@@ -15,7 +16,7 @@ function updateLikes (nameToGetMoreLikes) {
   $.ajax({
     url: '/likes/' + nameToGetMoreLikes, // creates individual POST calls
     type: 'POST',
-    data: nameToGetMoreLikes,
+    data: nameToGetMoreLikes,  // {}
     success: getLikes
   });
 }
