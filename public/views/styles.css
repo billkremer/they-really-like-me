@@ -58,3 +58,9 @@ button:hover {
 span {
   padding: 1px 1px 1px 4px;
 }
+
+#errormessage {
+  margin: 10px auto;
+  padding: 5px 5px;
+  text-align: center;
+}
