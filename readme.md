@@ -4,14 +4,14 @@ This repo demonstrates taking information from a JSON file and placing it on the
 
 Further functionality is added by a "likes" button, which keeps track of the total "likes" clicked.
 
-####Authors:
-* Priscilla Gyamfi
-* Scott Fox
-* Bill Kremer
+###Authors:
+#### Priscilla Gyamfi
+#### Scott Fox
+#### Bill Kremer
 
-* Date of Publication: January 20, 2017
+#### Date of Publication: January 20, 2017
 
-####Technology Used
+###Technology Used
 
 Express, Node, Git, HTML, CSS
 
